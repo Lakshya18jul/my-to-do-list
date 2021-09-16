@@ -1,0 +1,9 @@
+body{
+    margin:0px;
+    padding:0px;
+    width:100vw;
+    background-image: url("../images/background-image.jpeg");
+    background-repeat: no-repeat;
+    background-position-x:center;
+    background-size:100vw 100vh;
+}
