@@ -1,0 +1,50 @@
+.display-tasks{
+    height:4rem;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:1px solid #ffb8a4;
+}
+
+.task_data{
+    width:60%;
+    height: 70%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task_description_deadline{
+    width:85%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.task_description{
+    font-family: 'Comic Neue';
+    font-size:1rem;
+}
+
+.task_deadline{
+    color:lightslategray;
+    font-size:12px;
+    font-family: 'Comic Neue';
+}
+
+.task_category{
+    width:4.5rem;
+    height:60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    color:#18a795;
+    border:2px solid #fc9721;
+    border-radius:10px;
+    font-family:'Averia Serif Libre';
+}

@@ -1,3 +1,4 @@
+//setup the mongoose data base
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/ToDo_App");
 

@@ -1,0 +1,27 @@
+<!-- partial created to display all the tasks -->
+
+<% for(let task of tasks){%>
+
+    <div class="display-tasks">
+
+        <div class="task_data">
+            <input type="checkbox" name="checked_task" value="<%=task._id%>">
+            <div class="task_description_deadline">
+                <div class="task_description">
+                    <span><%=task.description%></span>
+                </div>
+    
+                <div class="task_deadline">
+                    <span><%=task.deadline%></span>
+                </div>
+            </div>
+        </div>  
+        
+        <div class="task_category">
+            <span><%=task.category%></span>
+        </div>
+
+    </div>   
+      
+    
+<%}%>

@@ -2,11 +2,68 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
 	<title> <%=title%></title>
+    <link href='https://fonts.googleapis.com/css?family=Akaya Telivigala' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Averia Serif Libre' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Comic Neue' rel='stylesheet'>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/_tasks.css">
 </head>
 <body>
 
+    <div id="app-container">        <!-- main app-container -->
+        <div id="heading">TODO APP</div>
+        <form action="/task/create-task" method="POST">
+            <div id="set-description">
+                <!-- give the description forthe task -->
+                <p class="input-head">DESCRIPTION</p>
+                <input type="text" name="description" id="task-description" placeholder="What do you want to do ??"required>
+            </div>
+
+            <div id="set-category-date">
+                <div id="set-category">
+                    <!-- set the category for the task -->
+                    <p class="input-head">CATEGORY</p>
+                    <select name="category"  required>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="demarkation">
+
+                </div>
+
+                <div id="set-date">
+                    <!-- set the deadline date for the task -->
+                    <p class="input-head">DUE DATE</p>
+                    <input type="date"  name="deadline" required>
+                </div>
+                
+            </div>
+
+            <div id="add-task">
+                <!-- add the delete and add task buttons -->
+                <button type="submit"> + ADD TASK</button>   
+                <button type="submit" id="delete-btn" form="delete-task-form">DELETE TASKS</button>
+            </div>
+        </form>
+
+   
+        <!-- display all the tasks -->
+        <form action="/task/delete-task" method="POST" id="delete-task-form">           
+           
+            <%- include("_tasks");%>
+        </form>
+        
+
+    </div>
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/js/home.js"></script>
 </html>
